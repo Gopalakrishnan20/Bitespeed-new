@@ -25,7 +25,6 @@ public class IdentityController {
      */
     @PostMapping("/identify")
     public ResponseEntity<IdentityResponse> identifyContact(@RequestBody IdentityRequest request) {
-        // Delegate the identity reconciliation logic to the service
         IdentityResponse response = identityService.identifyContact(request);
         return ResponseEntity.ok(response);
     }

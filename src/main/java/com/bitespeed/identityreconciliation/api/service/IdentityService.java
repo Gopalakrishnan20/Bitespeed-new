@@ -26,11 +26,12 @@ public class IdentityService {
         String phoneNumber = request.getPhoneNumber();
 
         Contact primaryContact;
+		//Create a list to store the secondary contacts
         List<Contact> secondaryContacts = new ArrayList<>();
         List<Contact> foundByEmail= new ArrayList();
         List<Contact> foundByPhone= new ArrayList();
         IdentityResponse response = new IdentityResponse();
-        // Create a new list to store the indices of contacts with LinkPrecedence set to PRIMARY
+        // Create a list to store the indices of contacts with LinkPrecedence set to PRIMARY
         List<Integer> primaryIndicesList = new ArrayList<>();
         
         
